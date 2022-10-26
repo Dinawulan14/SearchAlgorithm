@@ -88,7 +88,7 @@ namespace SearchAlgorithm
             {
                 //Accept the number to be searched
                 Console.WriteLine("\nEnter the element you want to search :");
-                int item = Convert.ToInt32((Console.ReadLine());
+                int item = Convert.ToInt32((Console.ReadLine()));
 
                 ctr = 0;
                 for (i = 0; i < n; i++)
@@ -147,22 +147,17 @@ namespace SearchAlgorithm
                         default:
                             Console.WriteLine(" Error ");
                             break;
-
                     }
-                }
-            }
+                    Console.WriteLine("\nPilih Menu Lagi? (y/n) : ");
+                    ch = char.Parse(Console.ReadLine().ToLower());
+                    Console.Clear();
+                } while (ch == 'y');
+
+                //to exit from the console
+                Console.WriteLine("\n\nPress Return to exit. ");
+                Console.ReadLine();
+            } while (pilihanmenu != 3);
         }
-
-                
-
-
-            }
-                
-
-
-                }
-
-
-
-
-           
+    }
+}
+      
